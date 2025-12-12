@@ -4,13 +4,17 @@ import functions.basic.*;
 public class Main {
 
     public static void main(String[] args) throws  FunctionPointIndexOutOfBoundsException, InappropriateFunctionPointException, ClassNotFoundException, InterruptedException {
+        ArrayTabulatedFunction arrayFunc1 = new ArrayTabulatedFunction(0, 9, 11);
+        LinkedListTabulatedFunction listFunc1 = new LinkedListTabulatedFunction(4, 10, 9);
 
-        TabulatedFunction func = TabulatedFunctions.tabulate(new Exp(), 4, 15, 10);
-
-		for (FunctionPoint p : func) {
+        System.out.println("\nArrayTabulatedFunction\n");
+		for (FunctionPoint p : arrayFunc1) {
 			System.out.println(p);
 		}
-
+        System.out.println("\nLinkedListTabulatedFunction\n");
+        for (FunctionPoint p : listFunc1) {
+			System.out.println(p);
+		}
         System.out.println("\n-------\n");
         
         Function func2 = new Cos();
